@@ -1,0 +1,225 @@
+@import url("http://fonts.googleapis.com/css?family=Roboto:300,400,500");
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  background-color: #420E38;
+  display: table;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.app {
+  display: table-cell;
+  vertical-align: middle;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#controls {
+  width: 300px;
+  background-color: #9C1481;
+  margin: 5px;
+  padding: 20px;
+  color: #fff;
+  border-radius: 10px 0 0 10px;
+  border: 3px solid #fff;
+  min-height: 440px;
+  display: inline-block;
+  vertical-align: top;
+  text-align: left;
+  margin-right: 0;
+}
+
+#video-ctn {
+  display: inline-block;
+  vertical-align: top;
+}
+
+canvas {
+  background-color: #582E4F;
+  margin: 5px;
+  border: 3px solid #fff;
+  margin-left: 0;
+}
+
+hr {
+  margin: 20px 0;
+  border: 1px solid #fff;
+}
+
+h3 {
+  margin: 0;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.onoffswitch {
+  display: inline-block;
+  float: right;
+}
+
+.control {
+  width: 250px;
+  margin-left: 40px;
+
+  >label {
+    font-size: 16px;
+    vertical-align: super;
+  }
+
+  >.onoffswitch {
+    margin: 10px;
+  }
+}
+
+.video-controls {
+  text-align: center;
+  margin-top: 20px;
+
+  a {
+    padding: 0px 8px 5px 10px;
+    font-size: 30px;
+    background-color: #DE6FC8;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    vertical-align: sub;
+    color: #fff;
+    margin: 5px;
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  #play {
+    background-color: #78DD57;
+  }
+
+  #stop {
+    background-color: #878787;
+  }
+
+  #rec {
+    background-color: #DD5757;
+    padding: 0 11px 5px 11px;
+  }
+
+}
+
+.led {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin: 1px 10px;
+  border-radius: 50%;
+  background-color: #A8A8A8;
+  box-shadow: 4px 3px 2px rgba(255,255,255,0.5) inset;
+
+  &.green {
+    background-color: #73AC6C;
+    box-shadow: 4px 3px 2px rgba(255,255,255,0.5) inset;
+
+    &.on {
+      background-color: #64ED53;
+      box-shadow: 0px 0px 12px rgb(147, 255, 147);
+    }
+  }
+
+  &.yellow {
+    background-color: #BED158;
+    box-shadow: 4px 3px 2px rgba(247, 255, 162, 0.5) inset;
+
+    &.on {
+      background-color: #D6F628;
+      box-shadow: 0px 0px 12px rgb(245, 255, 147);
+    }
+  }
+
+  &.orange {
+    background-color: #E38F27;
+    box-shadow: 4px 3px 2px rgba(255, 217, 153, 0.5) inset;
+
+    &.on {
+      background-color: #FF8E01;
+      box-shadow: 0px 0px 12px rgb(232, 167, 55);
+    }
+  }
+
+  &.red {
+    background-color: #E74D4D;
+    box-shadow: 4px 3px 2px rgba(239, 130, 130, 0.5) inset;
+
+    &.on {
+      background-color: #FF0000;
+      box-shadow: 0px 0px 12px rgb(232, 76, 55);
+    }
+  }
+
+  &.blink {
+    -webkit-animation: blink 0.5s linear infinite;
+    -moz-animation: blink 0.5s linear infinite;
+    animation: blink 0.5s linear infinite;
+  }
+
+}
+
+@keyframes blink {
+  50% {
+    background-color: #A8A8A8;
+    box-shadow: 4px 3px 2px rgba(255,255,255,0.1) inset;
+
+    //background-color: rgba(255,255,255, 0.8);
+    //box-shadow: 0px 0px 12px rgb(255, 255, 255);
+  }
+}
+
+
+/* Switch
+  https://proto.io/freebies/onoff/
+*/
+
+.onoffswitch {
+    position: relative; width: 80px;
+    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+}
+.onoffswitch-checkbox {
+    display: none;
+}
+.onoffswitch-label {
+    display: block; overflow: hidden; cursor: pointer;
+    border: 2px solid #FFFFFF; border-radius: 7px;
+}
+.onoffswitch-inner {
+    display: block; width: 200%; margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+    display: block; float: left; width: 50%; height: 18px; padding: 0; line-height: 18px;
+    font-size: 14px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+    box-sizing: border-box;
+}
+.onoffswitch-inner:before {
+    content: "ON";
+    padding-left: 10px;
+    background-color: #3EC234; color: #CFF5C4;
+}
+.onoffswitch-inner:after {
+    content: "OFF";
+    padding-right: 10px;
+    background-color: #EEEEEE; color: #A1A1A1;
+    text-align: right;
+}
+.onoffswitch-switch {
+    display: block; width: 24px; margin: -3px;
+    background: #DE6FC8;
+    position: absolute; top: 0; bottom: 0;
+    right: 58px;
+    border: 2px solid #FFFFFF; border-radius: 7px;
+    transition: all 0.3s ease-in 0s;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+    margin-left: 0;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+    right: 0px;
+}

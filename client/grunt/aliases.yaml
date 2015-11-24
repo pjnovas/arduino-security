@@ -1,0 +1,3 @@
+default:
+  - 'browserify:app'
+  - 'copy:assets'

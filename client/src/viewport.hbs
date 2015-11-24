@@ -1,0 +1,102 @@
+<div class="viewport">
+
+  <h3>Arduino Ready</h3>
+  {{#if arduino}}
+  <div class="led green on" title="ready!"></div>
+  {{else}}
+  <div class="led yellow on blink" title="wainting connection"></div>
+  {{/if}}
+
+  <hr/>
+
+  {{#if alarm.enabled}}
+  <div class="led green on blink"></div>
+  {{else}}
+  <div class="led"></div>
+  {{/if}}
+  <h3>Alarm</h3>
+  {{#if arduino}}
+  <div class="onoffswitch">
+    <input id="alarm-enabled" type="checkbox" class="onoffswitch-checkbox" {{#if alarm.enabled}}checked{{/if}}>
+    <label class="onoffswitch-label" for="alarm-enabled">
+      <span class="onoffswitch-inner"></span>
+      <span class="onoffswitch-switch"></span>
+    </label>
+  </div>
+  {{/if}}
+
+  <div class="control">
+    <label for="alarm-enabled">status</label>
+    {{#if alarm.on}}
+    <div class="led red on blink"></div>
+    {{else}}
+    <div class="led"></div>
+    {{/if}}
+  </div>
+
+  <div class="control">
+    <label for="alarm-enabled">motion</label>
+    {{#if motion}}
+    <div class="led yellow on blink"></div>
+    {{else}}
+    <div class="led"></div>
+    {{/if}}
+  </div>
+
+  <hr/>
+
+  {{#if light}}
+  <div class="led green on blink"></div>
+  {{else}}
+  <div class="led"></div>
+  {{/if}}
+  <h3>Light</h3>
+  {{#if arduino}}
+  <div class="onoffswitch">
+    <input id="light-on" type="checkbox" class="onoffswitch-checkbox" {{#if light}}checked{{/if}}>
+    <label class="onoffswitch-label" for="light-on">
+      <span class="onoffswitch-inner"></span>
+      <span class="onoffswitch-switch"></span>
+    </label>
+  </div>
+  {{/if}}
+
+  <hr/>
+
+  {{#if camera.working}}
+  <div class="led green on blink"></div>
+  {{else}}
+    {{#if camera.on}}
+    <div class="led green on"></div>
+    {{else}}
+    <div class="led"></div>
+    {{/if}}
+  {{/if}}
+  <h3>Camera</h3>
+  {{#unless camera.working}}
+  <div class="onoffswitch">
+    <input id="camera-on" type="checkbox" class="onoffswitch-checkbox" {{#if camera.on}}checked{{/if}}>
+    <label class="onoffswitch-label" for="camera-on">
+      <span class="onoffswitch-inner"></span>
+      <span class="onoffswitch-switch"></span>
+    </label>
+  </div>
+  {{/unless}}
+  <!--pos: {{camera.pos}}<br/>-->
+
+  <div class="control">
+    <label>recording</label>
+    {{#if camera.rec}}
+    <div class="led red on blink"></div>
+    {{else}}
+    <div class="led"></div>
+    {{/if}}
+  </div>
+
+  <div class="video-controls">
+    <a id="rec">&#9679;</a>
+    <a id="move-left">&#10096;</a>
+    <a id="move-right">&#10097;</a>
+  </div>
+
+</div>
