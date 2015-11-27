@@ -10,7 +10,7 @@
   <hr/>
 
   {{#if alarm.enabled}}
-  <div class="led green on blink"></div>
+  <div class="led green on"></div>
   {{else}}
   <div class="led"></div>
   {{/if}}
@@ -28,9 +28,13 @@
   <div class="control">
     <label for="alarm-enabled">status</label>
     {{#if alarm.on}}
-    <div class="led red on blink"></div>
+    <div class="led red on blink" title="ALARM FIRED!"></div>
     {{else}}
-    <div class="led"></div>
+      {{#if alarm.enabled}}
+      <div class="led yellow on blink" title="alarm active"></div>
+      {{else}}
+      <div class="led"></div>
+      {{/if}}
     {{/if}}
   </div>
 
@@ -82,7 +86,6 @@
     </label>
   </div>
   {{/unless}}
-  <!--pos: {{camera.pos}}<br/>-->
 
   <div class="control">
     <label>recording</label>

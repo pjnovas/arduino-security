@@ -15,6 +15,7 @@ var arduino = require('lib/server/arduino');
 var camera = require('lib/server/camera');
 
 require('lib/server/revealIP');
+require('lib/server/email');
 
 /**
  * Get port from environment and store in Express.

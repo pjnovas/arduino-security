@@ -22,6 +22,7 @@ export default {
       .on('click', '#camera-on', () => this.onActionCamera())
       .on('click', '#rec', () => this.onActionCameraRec())
       .on('click', '#light-on', () => this.onActionLight())
+      .on('click', '#alarm-enabled', () => this.onActionAlarm())
       .on('click', '#move-left', () => this.onActionMotor('left'))
       .on('click', '#move-right', () => this.onActionMotor('right'))
       .on('click', '#move-sweep', () => this.onActionMotor('sweep'));
@@ -41,6 +42,15 @@ export default {
   onFrame(raw){
     if (this.state.camera && this.state.camera.on){
       this.capture.frame(raw);
+    }
+  },
+
+  onActionAlarm(){
+    if ($('#alarm-enabled').prop('checked')){
+      this.fireAction('alarm:enable');
+    }
+    else {
+      this.fireAction('alarm:disable');
     }
   },
 

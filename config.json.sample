@@ -31,5 +31,27 @@
     "ext": ".jpeg",
     "quality": 40,
     "camIndex": 0 // If there are more than one camera plugged in, set the index here
+  },
+
+  "email": {
+    "enabled": false, // If is false wont send emails
+    "alarm": { // email configs when the alarm is fired
+      "screenshotsPerEmail": 5, // how many screenshots are sent per email
+      "screenshotsDelay": 1000, // delay per screenshot
+      "maxEmailsPerAlarm": 10 // how many emails are sent per alarm fired
+    },
+    "transport": { // Transport config for nodemailer
+      "service": "Mailgun",
+      "auth": {
+        "api_key": "key",
+        "domain": "sandbox",
+        "user": "postmaster",
+        "pass": "pass"
+      }
+    },
+    "notify": {
+      "sendTo": "youremail@something.com",
+      "sendAs": "notifier@home-portal.com"
+    }
   }
 }
