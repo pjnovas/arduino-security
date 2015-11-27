@@ -32,4 +32,6 @@ npm-debug.log
 # Compiled code for Camera
 lib/build
 
+config.json
 public/js/
+public/stylesheets/style.css

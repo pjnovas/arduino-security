@@ -20,7 +20,11 @@ export default {
   bindEvents() {
     $(this.container)
       .on('click', '#camera-on', () => this.onActionCamera())
-      .on('click', '#rec', () => this.onActionCameraRec());
+      .on('click', '#rec', () => this.onActionCameraRec())
+      .on('click', '#light-on', () => this.onActionLight())
+      .on('click', '#move-left', () => this.onActionMotor('left'))
+      .on('click', '#move-right', () => this.onActionMotor('right'))
+      .on('click', '#move-sweep', () => this.onActionMotor('sweep'));
   },
 
   setState(state){
@@ -59,6 +63,29 @@ export default {
     }
     else {
       this.fireAction('cam:rec:stop');
+    }
+  },
+
+  onActionLight() {
+    if ($('#light-on').prop('checked')){
+      this.fireAction('light:on');
+    }
+    else {
+      this.fireAction('light:off');
+    }
+  },
+
+  onActionMotor(type) {
+    switch(type){
+      case 'left':
+        this.fireAction('cam:move', 'left');
+        break;
+      case 'right':
+        this.fireAction('cam:move', 'right');
+        break;
+      case 'sweep':
+        this.fireAction('cam:move', 'sweep');
+        break;
     }
   },
 

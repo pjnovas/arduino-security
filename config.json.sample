@@ -1,0 +1,36 @@
+{
+  // Arduino config
+  "arduino": {
+    "sensor": {
+      "pin": 7 // only pin is allowed for sensor
+    },
+    "motor": { // Servo config from Johnny Five
+      "pin": 10,
+      "range": [0, 60],
+      "startAt": 20
+    },
+    "relay": { // Relay config from Johnny Five
+      "pin": 8,
+      "type": "NC"
+    }
+  },
+
+  // Server to post keeping track if this server is online
+  // For more info check [put repo here]
+  "alive": {
+    "enabled": true, // enable posting: if you haven't configured a server just set this to false
+    "interval": 5, // interval to send a post in MINUTES
+    "url": "http://someIP",
+    "user": "usr",
+    "pwd": "pass"
+  },
+
+  // Camera config for OpenCV
+  "camera": {
+    "width": 320,
+    "height": 240,
+    "ext": ".jpeg",
+    "quality": 40,
+    "camIndex": 0 // If there are more than one camera plugged in, set the index here
+  }
+}
