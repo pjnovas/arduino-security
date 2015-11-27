@@ -16,13 +16,12 @@
   },
 
   // Server to post keeping track if this server is online
-  // For more info check [put repo here]
+  // For more info check https://github.com/pjnovas/is-alive
   "alive": {
     "enabled": true, // enable posting: if you haven't configured a server just set this to false
     "interval": 5, // interval to send a post in MINUTES
     "url": "http://someIP",
-    "user": "usr",
-    "pwd": "pass"
+    "secret": "some secret code", // Same secret at server [check repo]
   },
 
   // Camera config for OpenCV

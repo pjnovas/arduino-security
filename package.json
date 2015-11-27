@@ -1,9 +1,8 @@
 {
-  "name": "arduino-webcam",
+  "name": "home-portal",
   "version": "1.0.0",
-  "private": true,
   "scripts": {
-    "start": "NODE_PATH=. DEBUG=arduino-webcam:* node ./bin/www"
+    "start": "NODE_PATH=. DEBUG=home-portal:* node ./bin/www"
   },
   "dependencies": {
     "babel-core": "^6.2.1",
@@ -24,8 +23,5 @@
     "serve-favicon": "~2.3.0",
     "socket.io": "^1.3.7",
     "superagent": "^1.4.0"
-  },
-  "devDependencies": {
-    "heapdump": "^0.3.7"
   }
 }

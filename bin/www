@@ -7,7 +7,7 @@
 require("babel-core/register")(/*{ignore: false}*/);
 
 var app = require('lib/server');
-var debug = require('debug')('arduino-webcam:server');
+var debug = require('debug')('home-portal:server');
 var http = require('http');
 
 var websockets = require('lib/server/websockets');
