@@ -1,9 +1,11 @@
 {
   "name": "home-portal",
   "version": "1.0.0",
+  "description": "WebServer as a portal to your home to stream a webcamera and control stuff with Arduino",
   "scripts": {
     "start": "NODE_PATH=. DEBUG=home-portal:* node ./bin/www"
   },
+  "license": "BSD-3-Clause",
   "dependencies": {
     "babel-core": "^6.2.1",
     "babel-plugin-add-module-exports": "^0.1.1",
