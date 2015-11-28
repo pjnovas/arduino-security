@@ -6,8 +6,8 @@ WebServer as a portal to your home:
   * A servo motor for moving the Webcamera
   * A Relay to switch a light bulb on/off
   * A Motion detection to fire an alarm and send you an email
-* Record from the web camera and post to a server (or save to the filesystem) a collection of base64 frames
-* Post a public IP to a server for getting access (if is in your home you probably have a dynamic IP)
+* Record from the web camera and post to a [server](https://github.com/pjnovas/base64-keeper) (or save to the filesystem) a collection of base64 frames
+* Post a public IP to a [server](https://github.com/pjnovas/is-alive) for getting access (if is in your home you probably have a dynamic IP)
 
 ## Requirements
 * NodeJS 0.12.x
