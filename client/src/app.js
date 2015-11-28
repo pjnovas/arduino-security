@@ -69,10 +69,10 @@ export default {
 
   onActionCameraRec(){
     if (this.state.camera.rec) {
-      this.fireAction('cam:rec:start');
+      this.fireAction('cam:rec:stop');
     }
     else {
-      this.fireAction('cam:rec:stop');
+      this.fireAction('cam:rec:start');
     }
   },
 

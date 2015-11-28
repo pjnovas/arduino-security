@@ -33,6 +33,21 @@
     "camIndex": 0 // If there are more than one camera plugged in, set the index here
   },
 
+  // Record from Camera destinations
+  "recorder": {
+    "enabled": true, // disable all recording
+    "destinations": [{ // Array with destinations
+      "type": "HTTP", // for this implementation check https://github.com/pjnovas/base64-keeper
+      "enabled": true, // set to false to disable this destination
+      "url": "http://someIP",
+      "secret": "some-secret"
+    }, {
+      "type": "FS", // just send the record into the filesystem
+      "enabled": true,
+      "path": "/opt/records"
+    }]
+  },
+
   "email": {
     "enabled": false, // If is false wont send emails
     "alarm": { // email configs when the alarm is fired
