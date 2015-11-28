@@ -28,7 +28,7 @@ body {
   text-align: center;
 }
 
-.login {
+#controls, .login>form {
   width: 300px;
   background-color: #9C1481;
   margin: 5px;
@@ -43,19 +43,36 @@ body {
   margin-right: 0;
 }
 
-#controls {
-  width: 300px;
-  background-color: #9C1481;
-  margin: 5px;
-  padding: 20px;
-  color: #fff;
-  border-radius: 10px 0 0 10px;
-  border: 3px solid #fff;
-  min-height: 440px;
-  display: inline-block;
-  vertical-align: top;
-  text-align: left;
-  margin-right: 0;
+.login>form {
+  vertical-align: middle;
+  min-height: auto;
+  border-radius: 6px;
+  text-align: center;
+
+  h1 {
+    margin-top: 0;
+  }
+
+  input[type=text], input[type=password]{
+    border: 2px solid #DF2ABC;
+    border-radius: 3px;
+    padding: 5px;
+    display: inline-block;
+    margin: 5px auto;
+  }
+
+  input[type=submit]{
+    display: block;
+    margin: 0 auto;
+    padding: 5px 20px;
+    margin-top: 10px;
+    background: #DF2ABC;
+    color: #fff;
+    border: 2px solid #fff;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+  }
 }
 
 #video-ctn {

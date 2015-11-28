@@ -6,16 +6,16 @@
 
 require("babel-core/register")(/*{ignore: false}*/);
 
-var app = require('lib/server');
+var app = require('lib/index');
 var debug = require('debug')('home-portal:server');
 var http = require('http');
 
-var websockets = require('lib/server/websockets');
-var arduino = require('lib/server/arduino');
-var camera = require('lib/server/camera');
+var websockets = require('lib/websockets');
+var arduino = require('lib/arduino');
+var camera = require('lib/camera');
 
-require('lib/server/revealIP');
-require('lib/server/email');
+require('lib/revealIP');
+require('lib/email');
 
 /**
  * Get port from environment and store in Express.

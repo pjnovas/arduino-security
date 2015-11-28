@@ -1,4 +1,10 @@
 {
+  // User and pass for panel
+  "auth": {
+    "sessionSecret": "some-secret",
+    "user": "admin",
+    "password": "admin"
+  },
   // Arduino config
   "arduino": {
     "sensor": {
