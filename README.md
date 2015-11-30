@@ -42,7 +42,7 @@ sudo apt-get update && sudo apt-get install arduino arduino-core
 ```
 * Open Arduino IDE
 * Plug the board into USB and check if is active as Serial Port in Tools > Serial Port > /dev/ttyACM0
-* If Serial Port option is disabled, add permissions to the user `sudo chmod a+rw /dev/ttyACM0`
+* If Serial Port option is disabled, add the user to `dialout` group: `sudo usermod -a -G dialout [yourusename]`
 * Open Arduino IDE > File > Examples > Firmata > StandardFirmata
 * Click on Upload (with the Arduino board connected by USB)
 
